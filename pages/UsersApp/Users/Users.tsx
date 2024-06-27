@@ -1,12 +1,12 @@
 import { UsersPageWrapper, UserCard, Paragraph } from "./styles"
 
 import { useAppSelector } from "store/hooks"
-import { userSliceSelectors } from "store/redux/usersSlice/usersSlice"
+import { userSliceSelectors } from "store/redux/users/usersSlice"
 
 function Users() {
   const users = useAppSelector(userSliceSelectors.users)
 
-  const userCards = users.map((user) => {
+  const userCards = users.map(user => {
     return (
       <UserCard key={user.id}>
         <Paragraph>{user.fullName}</Paragraph>
@@ -16,11 +16,7 @@ function Users() {
     )
   })
 
-  return (
-    <UsersPageWrapper>
-      {userCards}
-    </UsersPageWrapper>
-  )
+  return <UsersPageWrapper>{userCards}</UsersPageWrapper>
 }
 
 export default Users

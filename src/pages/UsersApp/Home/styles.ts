@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-export const HomePageWrapper = styled.div`//обертка для всей страницы
+export const HomePageWrapper = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;

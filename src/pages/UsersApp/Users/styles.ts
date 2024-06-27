@@ -8,7 +8,7 @@ export const UsersPageWrapper = styled.div`
   gap: 24px;
 `
 
-export const UserCard = styled.div`//карточка внутри которой будет информация
+export const UserCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -18,7 +18,7 @@ export const UserCard = styled.div`//карточка внутри которо�
   border: 1px solid black;
 `
 
-export const Paragraph = styled.p`//отображение имени, фамилии, возраста и работы
+export const Paragraph = styled.p`
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;

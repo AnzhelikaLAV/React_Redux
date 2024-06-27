@@ -18,7 +18,7 @@ function Feedback() {
 
   const addLike = () => { dispatch(feedbackSliceActions.addLike()) }
 
-  const addDislike = () => { dispatch(feedbackSliceActions.addDisLike()) }
+  const addDislike = () => { dispatch(feedbackSliceActions.addDislike()) }
 
   const resetResults = () => { dispatch(feedbackSliceActions.resetResults()) }
 
@@ -27,14 +27,14 @@ function Feedback() {
       <ImagesResultsWrapper>
         <Count>{like}</Count>
         <ImageContainer>
-          <Image src={LikeImg} alt="like" onClick={addLike} />
+          <Image src={LikeImg} alt='like' onClick={addLike} />
         </ImageContainer>
         <ImageContainer>
-          <Image src={DislikeImg} alt="dislike" onClick={addDislike} />
+          <Image src={DislikeImg} alt='dislike' onClick={addDislike} />
         </ImageContainer>
         <Count>{dislike}</Count>
       </ImagesResultsWrapper>
-      <Button name="Reset results" onClick={resetResults} />
+      <Button name='Reset results' onClick={resetResults} />
     </FeedbackWrapper>
   )
 }

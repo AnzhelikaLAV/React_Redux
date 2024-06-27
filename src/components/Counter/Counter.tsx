@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from "store/hooks"
 import {
   counterSliceActions,
   counterSliceSelectors,
-} from "store/redux/counter/CounterSlice"
+} from "store/redux/counter/counterSlice"
 
 function Counter() {
   //10.Забираем значение count из store

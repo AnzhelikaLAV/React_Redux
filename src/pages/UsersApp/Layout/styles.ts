@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { NavLink, Link } from "react-router-dom";
 
-export const LayoutWrapper = styled.div`//общая обертка
+export const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -13,12 +13,12 @@ export const Header = styled.header`
   align-items: center;
   padding: 20px;
   width: 100%;
-  height: fit-content; //чтобы контент подстроился под логотип и ссылки
+  height: fit-content;
   background-color: #2f5a6e;
   color: white;
 `;
 
-export const HeaderLogoContainer = styled.div`//логотип обертка
+export const HeaderLogoContainer = styled.div`
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -29,12 +29,12 @@ export const HeaderLogo = styled.img`
   height: 100%;
 `;
 
-export const NavContainer = styled.nav` // home users
+export const NavContainer = styled.nav`
   display: flex;
   gap: 10px;
 `;
 
-export const Main = styled.main`//обертка
+export const Main = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -58,13 +58,13 @@ export const FooterNavContainer = styled.nav`
   gap: 10px;
 `;
 
-export const StyledNavLink = styled(NavLink)`//навигационные ссылки 
+export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-size: 20px;
   color: white;
 `;
 
-export const StyledLink = styled(Link)`//обычные ссылки
+export const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 16px;
   color: white;

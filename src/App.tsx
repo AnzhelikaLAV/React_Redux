@@ -1,28 +1,34 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-// lesson16
-import Layout from "pages/UsersApp/Layout/Layout"
-import Home from "pages/UsersApp/Home/Home"
+//Lesson 16
+// import Layout from 'pages/UsersApp/Layout/Layout'
+// import Home from 'pages/UsersApp/Home/Home'
+// import Users from 'pages/UsersApp/Users/Users'
 
-// lessons
-//import Lesson15 from "lessons/Lesson15/Lesson15"
+//lessons
+// import Lesson15 from 'lessons/Lesson15/Lesson15'
+// import Lesson17 from 'lessons/Lesson17/Lesson17'
+import Weather from 'components/Weather/Weather'
 
 // homeworks
-//import Homework15 from "homeworks/Homework15/Homework"
+// import Homework15 from 'homeworks/Homework15/Homework15'
+
 
 const App = () => {
   return (
     <BrowserRouter>
       {/* <Lesson15 /> */}
-      {/* <Homework15 /> */}
-      {/* lesson16 */}
-      <Layout>
+      {/* <Homework15/> */}
+      {/* Lesson 16 practice*/}
+      {/* <Layout>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/users" element={"Users"}></Route>
-          <Route path="*" element={"Page not found"}></Route>
+          <Route path='/' element={<Home />} />
+          <Route path='/users' element={<Users />} />
+          <Route path='*' element={'Page not found'} />
         </Routes>
-      </Layout>
+      </Layout> */}
+      {/* <Lesson17 /> */}
+      <Weather />
     </BrowserRouter>
   )
 }

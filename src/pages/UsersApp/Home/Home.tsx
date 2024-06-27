@@ -1,27 +1,33 @@
 import { useFormik } from "formik"
 import { useAppDispatch } from "store/hooks"
 
+
 import Input from "components/Input/Input"
 import Button from "components/Button/Button"
 
 import { HomePageWrapper, UserForm, UserFormName } from "./styles"
 import { v4 } from "uuid"
-import { usersSliceActions } from "store/redux/userSlice/userSlice"
+import { usersSliceActions } from "store/redux/users/usersSlice"
 
 function Home() {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   const formik = useFormik({
     initialValues: {
-      fullName: "",
-      age: "",
-      jobTitle: "",
+      fullName: '',
+      age: '',
+      jobTitle: ''
     },
-    onSubmit: values => {
-      console.log("Submitting form values:", values)
-      dispatch(usersSliceActions.addUser({ ...values, id: v4() }))
-    },
+    onSubmit: (values, helpers) => {
+      if (!!values.fullName && !!values.age && !!values.jobTitle) {
+        dispatch(usersSliceActions.addUser({ ...values, id: v4() }))
+        helpers.resetForm()
+      } else {
+        alert('please fill in all the fields')
+      }
+    }
   })
+
 
   return (
     <HomePageWrapper>

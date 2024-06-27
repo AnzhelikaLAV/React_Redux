@@ -16,7 +16,6 @@ import {
 
 
 function Layout({ children }: LayoutProps) {
-  //чилдрен для layout, чтобы в зависимости от url менялся контент//LayoutProps типизировала, находится в файле types
 
   return (
     <LayoutWrapper>
@@ -45,7 +44,7 @@ function Layout({ children }: LayoutProps) {
       </Header>
       <Main>{children}</Main>
       <Footer>
-        <HeaderLogoContainer>
+        <HeaderLogoContainer >
           <HeaderLogo src={Logo} />
         </HeaderLogoContainer>
         <FooterNavContainer>
